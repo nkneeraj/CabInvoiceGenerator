@@ -1,11 +1,18 @@
 package com.cg.cabinvoicegenerator;
 
 public class Ride {
-	public double distance;
+	public double distnce;
 	public int time;
 
-	public Ride(double distance, int time) {
-		this.distance = distance;
+	enum RideType {
+		NORMAL, PREMIUM
+	}
+
+	public RideType rideType;
+
+	public Ride(double distance, int time, RideType rideType) {
+		this.distnce = distance;
 		this.time = time;
+		this.rideType = rideType;
 	}
 }
